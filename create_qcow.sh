@@ -1,0 +1,2 @@
+#!/bin/bash
+podman run     --rm     -it     --privileged     --pull=newer     --security-opt label=type:unconfined_t     -v /var/lib/containers/storage:/var/lib/containers/storage:Z     -v ./config.toml:/config.toml:Z     -v /var/output:/output:Z     registry.redhat.io/rhel10/bootc-image-builder:latest     --type qcow2     --config /config.toml     satellite.loudwalrus.com/loudwalrus/test/rhel10_image_test/rhel10_image_mode_test/isdemo:1.1
