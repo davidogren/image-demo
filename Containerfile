@@ -9,7 +9,6 @@ RUN dnf -y install \
         kernel-devel \
         kernel-headers \
         podman \
-        tmux \
         tree
 
 COPY etc/sudoers /etc/sudoers
