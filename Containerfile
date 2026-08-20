@@ -32,7 +32,7 @@ RUN dnf config-manager --set-enabled codeready-builder-for-rhel-9-x86_64-rpms &&
     dnf clean all && \
     mv /etc/selinux.tmp /etc/selinux
 
-## At this point we'd probably do more config, but I'll just wrap up by updating subscription manager
+## At this point we'd probably do more config, but I'll just wrap up by copying bootc/podman auth files
 COPY  config/auth.json /run/containers/0/auth.json 
 COPY  config/auth.json /run/ostree/auth.json
 
